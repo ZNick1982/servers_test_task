@@ -34,7 +34,7 @@ Be sure to define your `*.spec.js` files within their corresponding component di
 
 Mock data template for http://www.json-generator.com/
 
-[
+`[
   '{{repeat(7, 10)}}',
   {
     id: '{{guid()}}',
@@ -51,4 +51,4 @@ Mock data template for http://www.json-generator.com/
       }
     ]
   }
-]
+]`
