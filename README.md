@@ -34,21 +34,21 @@ Be sure to define your `*.spec.js` files within their corresponding component di
 
 Mock data template for http://www.json-generator.com/
 
-`[
-  '{{repeat(7, 10)}}',
-  {
-    id: '{{guid()}}',
-    name: '{{firstName()}} {{surname()}}',
-    registered: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
-    picture: 'http://lorempixel.com/400/400/business/',
-    
-    messages: [
-      '{{repeat(5, 20)}}',
-      {
-        id: '{{guid()}}',
-		    text: '{{lorem(1, "paragraphs")}}',
-        date: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}'
-      }
-    ]
-  }
-]`
+`[`
+`  '{{repeat(7, 10)}}',`
+`  {`
+`    id: '{{guid()}}',`
+`    name: '{{firstName()}} {{surname()}}',`
+`    registered: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}', `
+`    picture: 'http://lorempixel.com/400/400/business/',`
+`    `
+`    messages: [`
+`      '{{repeat(5, 20)}}',`
+`      {`
+`        id: '{{guid()}}',`
+`		    text: '{{lorem(1, "paragraphs")}}',`
+`        date: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}'`
+`      }`
+`    ]`
+`  }`
+`]`
