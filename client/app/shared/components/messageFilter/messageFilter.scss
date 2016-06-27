@@ -1,0 +1,38 @@
+@import "../../sass/variables";
+
+.messageFilter {
+  margin-bottom: 20px;
+  background-color: $message-background-color;
+  border: 1px solid $message-border-color;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: $gray-lighter;
+}
+
+
+/*
+ * Datepicker element
+ */
+
+.datepicker.dropdown-menu {
+  width: 250px;
+  height: 270px;
+  button {
+    outline: none;
+    border: 0px;
+  }
+  tbody {
+    height: 180px;
+  }
+  tbody button {
+    padding: 6px;
+  }
+  &.datepicker-mode-1, &.datepicker-mode-2 {
+    tbody button {
+      height: 65px;
+    }
+  }
+}

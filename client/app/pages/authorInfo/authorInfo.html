@@ -1,0 +1,35 @@
+<div infinite-scroll="ai.loadMore()", infinite-scroll-distance="50">
+  <div class="text-center">
+    <h1>Author Info</h1>
+  </div>
+  <p>
+    <div class="row">
+      <div class="col-md-3">
+        <img src="{{ai.authorData.picture}}" class="img-circle">
+      </div>
+      <div class="col-md-6 col-md-offset-1">
+        <h3>{{ai.authorData.name}}</h3>
+        <p>
+          <b>Registered: {{ai.authorData.registered | date}}</b>
+        </p>
+        <p>
+          <b>Messages count: {{ai.authorData.messages.length}}</b>
+        </p>
+      </div>
+      <div class="col-md-2">
+        <a class="btn btn-default btn-block" ui-sref="messageList">Back</a>
+      </div>
+    </div>
+  </p>
+  <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Author messages</h2>
+      </div>
+  </div>
+  
+  <message-feed messages="ai.messages"></message-feed>
+  <div class="text-center text-danger" ng-if="ai.isLoading">
+        Loading messages... <i class="fa fa-refresh fa-spin"></i>
+  </div>
+</div>
+

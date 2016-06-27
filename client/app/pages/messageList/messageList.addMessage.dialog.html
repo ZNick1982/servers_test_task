@@ -1,0 +1,34 @@
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" ng-form name="addMessageFrm">
+    <div class="modal-content">
+      <div class="modal-header" ng-show="title">
+        <button type="button" class="close" aria-label="Close" ng-click="ml.cancelAddMessage()"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" ng-bind="title"></h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            Author: <span class="text-info">Leta Carson</span>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group" ng-class="{'has-error': addMessageFrm.newMessage.$error.required || addMessageFrm.newMessage.$error.maxlength}">
+                <label for="newMessage">Message: </label>
+              <textarea class="form-control" rows="3" name="newMessage" 
+                ng-model="ml.newMessage" ng-maxlength="{{ml.maxMessageLen}}" ng-change="ml.calcCharCnt(addMessageFrm.newMessage.$error.required)" required></textarea>
+              <small class="pull-right text-gray">{{ml.leftCharsCnt}}</small>  
+              <small>{{addMessageFrm.message.$error}}</small>  
+              <div ng-messages="addMessageFrm.newMessage.$error" class="text-danger" role="alert">
+                <div ng-message="required">Required field</div>
+                <div ng-message="maxlength">Message to long</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="ml.addMessage()" ng-disabled="!addMessageFrm.newMessage.$valid">Add</button>
+        <button type="button" class="btn btn-default" ng-click="ml.cancelAddMessage()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="messageFilter">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Message filter</h3>
+      <div ng-form name="filterFrm">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group" ng-class="{'has-error':filterFrm.dateFrom.$error.date}">
+              <label for="dateFrom">Date from:</label>
+              <input type="text" class="form-control" name="dateFrom" placeholder="Date from" 
+                ng-model="f.filter.dateFrom" bs-datepicker ng-change="f.onUpdate()">
+              <div ng-messages="filterFrm.dateFrom.$error" class="text-danger" role="alert">
+                <div ng-message="date">Invalid date</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group" ng-class="{'has-error':filterFrm.dateTo.$error.date}">
+              <label for="dateTo">Date to:</label>
+              <input type="text" class="form-control" name="dateTo" placeholder="Date to"
+                ng-model="f.filter.dateTo" bs-datepicker ng-change="f.onUpdate()">
+              <div ng-messages="filterFrm.dateTo.$error" class="text-danger" role="alert">
+                <div ng-message="date">Invalid date</div>
+              </div>                
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="textToContain">Text to contain:</label>
+              <input type="text" class="form-control" name="textToContain" placeholder="Text to contain"
+                ng-model="f.filter.textToContain" ng-change="f.onUpdate()">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="author">Author: </label>
+              <input type="text" class="form-control" name="author" placeholder="Author"
+                ng-model="f.filter.author" ng-change="f.onUpdate()">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

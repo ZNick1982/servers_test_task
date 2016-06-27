@@ -1,0 +1,20 @@
+<div infinite-scroll="ml.loadMore()", infinite-scroll-distance="50">
+  <div class="text-center">
+    <h1>Message feed</h1>
+  </div>
+  <p>
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-primary btn-lg btn-block" ng-click="ml.showAddMessageDialog()">
+            <i class="fa fa-plus"></i>  Add Message
+          </button>
+      </div>
+    </div>
+  </p>
+  <message-filter filter="ml.filter" on-update="ml.filterChanged()"></message-filter>
+  <message-feed messages="ml.messages"></message-feed>
+  <div class="text-center text-danger" ng-if="ml.isLoading">
+        Loading messages... <i class="fa fa-refresh fa-spin"></i>
+  </div>
+</div>
+

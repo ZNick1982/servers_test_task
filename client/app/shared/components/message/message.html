@@ -1,0 +1,17 @@
+<div class="message">
+  <div class="row">
+    <div class="col-md-12">
+      <blockquote>
+        <p>{{mc.message.text}}</p>
+        <footer>
+          {{mc.message.date | date:'dd/MM/yyyy @ h:mma'}} | By 
+          <a ui-sref="authorInfo({authorId: mc.message.author.id})">
+            <cite title="{{mc.message.author.name}}">
+              {{mc.message.author.name}}
+            </cite>
+          </a>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</div>
