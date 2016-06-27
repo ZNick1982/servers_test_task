@@ -9,9 +9,6 @@ Once you have these, install the following as globals:
 ## Installing
 * `npm install -g gulp karma karma-cli webpack` install global cli dependencies
 * `npm install` to install dependencies
-
-## Running the App
-NG6 uses Gulp to build and launch the development environment. After you have installed all dependencies, you may run the app. Running `gulp` will bundle the app with `webpack`, launch a development server, and watch all files. The port will be displayed in the terminal.
  
 ### Gulp Tasks
 Here's a list of available tasks:
